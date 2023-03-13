@@ -6,14 +6,28 @@ using namespace std;
 void drawCircle(int x, int y, int xc, int yc)
 {
     putpixel(xc+x, yc+y, YELLOW);
-    putpixel(xc+x, yc-y, BLUE);
-    putpixel(xc-x, yc+y, YELLOW);
-    putpixel(xc-x, yc-y, BLUE);
-    putpixel(xc+y, yc+x, YELLOW);
-    putpixel(xc+y, yc-x, BLUE);
-    putpixel(xc-y, yc+x, YELLOW);
-    putpixel(xc-y, yc-x, BLUE);
+    cout << "(" << xc+x << ", " << yc+y << ") ";
 
+    putpixel(xc+x, yc-y, BLUE);
+    cout << "(" << xc+x << ", " << yc-y << ") ";
+
+    putpixel(xc-x, yc+y, YELLOW);
+    cout << "(" << xc-x << ", " << yc+y << ") ";
+
+    putpixel(xc-x, yc-y, BLUE);
+    cout << "(" << xc-x << ", " << yc-y << ") ";
+
+    putpixel(xc+y, yc+x, YELLOW);
+    cout << "(" << xc+y << ", " << yc+x << ") ";
+
+    putpixel(xc+y, yc-x, BLUE);
+    cout << "(" << xc+y << ", " << yc-x << ") ";
+
+    putpixel(xc-y, yc+x, YELLOW);
+    cout << "(" << xc-y << ", " << yc+x << ") ";
+
+    putpixel(xc-y, yc-x, BLUE);
+    cout << "(" << xc-y << ", " << yc-x << ") ";
 }
 
 int main()
