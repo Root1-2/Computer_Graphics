@@ -26,6 +26,7 @@ int main()
         while(x<=x2)
         {
             putpixel(x, y, BLUE);
+            cout<<"Plotted Points: ("<<x<<","<<y<<")"<<endl;
             x++;
             y = y+slope;
             delay(50);
@@ -36,6 +37,7 @@ int main()
         while(y<=y2)
         {
             putpixel(x, y, CYAN);
+            cout<<"Plotted Points: ("<<x<<","<<y<<")"<<endl;
             x = x + (1/slope);
             y++;
             delay(50);
