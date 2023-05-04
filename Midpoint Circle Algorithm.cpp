@@ -6,28 +6,14 @@ using namespace std;
 void drawCircle(int x, int y, int xc, int yc)
 {
     putpixel(xc+x, yc+y, YELLOW);
-    cout << "(" << xc+x << ", " << yc+y << ") ";
-
     putpixel(xc+x, yc-y, BLUE);
-    cout << "(" << xc+x << ", " << yc-y << ") ";
-
     putpixel(xc-x, yc+y, YELLOW);
-    cout << "(" << xc-x << ", " << yc+y << ") ";
-
     putpixel(xc-x, yc-y, BLUE);
-    cout << "(" << xc-x << ", " << yc-y << ") ";
-
     putpixel(xc+y, yc+x, YELLOW);
-    cout << "(" << xc+y << ", " << yc+x << ") ";
-
     putpixel(xc+y, yc-x, BLUE);
-    cout << "(" << xc+y << ", " << yc-x << ") ";
-
     putpixel(xc-y, yc+x, YELLOW);
-    cout << "(" << xc-y << ", " << yc+x << ") ";
-
     putpixel(xc-y, yc-x, BLUE);
-    cout << "(" << xc-y << ", " << yc-x << ") ";
+
 }
 
 int main()
@@ -63,13 +49,12 @@ int main()
     }
     getch();
 
-    closegraph();
-
     cout<<"Do you want to run again? (1 for Yes, 2 for No)"<<endl;
     int choice;
     cin>>choice;
     if(choice == 1)
     {
+        closegraph();
         main();
     }
     else if(choice == 2)

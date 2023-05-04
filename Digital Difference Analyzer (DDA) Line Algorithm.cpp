@@ -8,7 +8,7 @@ int main()
     int graphicsdriver = DETECT, gm;
     initgraph(&graphicsdriver, &gm, (char*)" ");
 
-    int x, y, x1, x2, y1, y2, dx, dy, slope;
+    double x, y, x1, x2, y1, y2, dx, dy, slope;
 
     cout<<"Enter Starting (x1, y1) Points: ";
     cin>>x1>>y1;
@@ -27,8 +27,8 @@ int main()
         {
             putpixel(x, y, BLUE);
             cout<<"Plotted Points: ("<<x<<","<<y<<")"<<endl;
-            x++;
-            y = y+slope;
+            x += 1;
+            y += slope;
             delay(50);
         }
     }
@@ -38,21 +38,20 @@ int main()
         {
             putpixel(x, y, CYAN);
             cout<<"Plotted Points: ("<<x<<","<<y<<")"<<endl;
-            x = x + (1/slope);
-            y++;
+            x += 1/slope;
+            y += 1;
             delay(50);
         }
     }
 
     getch();
 
-    closegraph();
-
     cout<<"Do you want to run again? (1 for Yes, 2 for No)"<<endl;
     int choice;
     cin>>choice;
     if(choice == 1)
     {
+        closegraph();
         main();
     }
     else if(choice == 2)
