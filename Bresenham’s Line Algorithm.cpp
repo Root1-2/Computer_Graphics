@@ -25,12 +25,10 @@ int main()
         main();
     }
 
+    //Breshenham's Line Algorithm
     dx = x2-x1, dy = y2-y1;
     p = 2 * dy - dx;
-
     x = x1, y = y1;
-
-    //Breshenham's Line Algorithm
 
     while(x<=x2)
     {
@@ -48,6 +46,7 @@ int main()
             p = p + 2*(dy-dx);
         }
     }
+    
     getch();
 
     cout<<"Do you want to run again? (1 for Yes, 2 for No)"<<endl;
